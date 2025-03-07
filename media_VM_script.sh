@@ -225,6 +225,7 @@ duf
 ip -c a
 
 #Echo information
+echo " "
 echo "Ensure that /mnt/media contains this structure (created with sudo mkdir):"
 echo "
 /mnt/media
@@ -233,6 +234,7 @@ echo "
 └── movie
 "
 sudo tree /mnt/media
+echo " "
 echo "Use docker compose up without -d, to get the login password for qbittorrent"
 
 # Switch to Fish shell

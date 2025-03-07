@@ -13,6 +13,9 @@ Follow these steps to set up your media VM environment:
 2. **Make the Script Executable**:
    ```bash
    chmod +x media_VM_script.sh
-4. **Run the Script**:
+3. **Swith to sudo user**
+   ```bash
+   su
+5. **Run the Script**:
    ```bash
    bash media_VM_script.sh

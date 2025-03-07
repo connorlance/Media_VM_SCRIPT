@@ -19,7 +19,6 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 
 # Install Docker and Docker Compose
-sudo apt update
 sudo apt install -y \
     ca-certificates \
     curl \
@@ -67,9 +66,9 @@ df -h
 sudo bash -c "echo \"$nfs_ip_path /mnt/media nfs defaults,nofail,retry=25 0 0\" >> /etc/fstab"
 
 # Create docker containers
-cd
+cd /home/$username
 sudo mkdir docker
-cd docker
+cd /home/$username/docker
 sudo mkdir jellyfin
 sudo mkdir overseerr
 sudo mkdir plex

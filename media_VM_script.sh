@@ -236,5 +236,5 @@ sudo tree /mnt/media
 echo " "
 echo "Use docker compose up without -d, to get the login password for qbittorrent"
 
-# Switch to Fish shell
-exec fish
+# Exit su session
+exit

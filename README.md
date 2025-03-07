@@ -7,9 +7,6 @@ This repository contains a script to set up your media VM environment.
 Follow these steps to set up your media VM environment:
 
 1. **Download the Script**:
-   
-   Run the following command in your terminal to download the script directly from GitHub:
-
    ```bash
    curl -sS https://raw.githubusercontent.com/connorlance/Media_VM_SCRIPT/main/media_VM_script.sh -o media_VM_script.sh
 

@@ -69,6 +69,7 @@ sudo apt-get install tree -y
 sudo apt-get install micro -y
 sudo apt install htop -y
 sudo apt install neofetch -y
+sudo apt install rsync -y
 
 #Install nfs
 sudo apt install -y nfs-common

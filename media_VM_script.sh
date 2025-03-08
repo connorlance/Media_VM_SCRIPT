@@ -16,6 +16,7 @@ if [ "$answer" == "y" ]; then
     export PATH=$PATH:/sbin:/usr/sbin
     sudo mount /dev/cdrom /mnt
     sudo bash /mnt/Linux/install.sh
+    sudo umount /mnt
 else
     echo "Installation canceled."
 fi

@@ -8,6 +8,18 @@ read -p "Enter nfs IP and path (server_ip:/mnt/path): " nfs_ip_path
 read -p "Enter PIA username: " pia_username
 read -p "Enter PIA password: " pia_password
 
+echo "Do you have the Xen guest tools CD-ROM connected and want to install Xen guest tools? (yes/no)"
+read answer
+if [ "$answer" == "yes" ]; then
+    echo "Proceeding with the installation..."
+    # Set temporary path to avoid potential errors
+    export PATH=$PATH:/sbin:/usr/sbin
+    sudo mount /dev/cdrom /mnt
+    sudo bash /mnt/Linux/install.sh
+else
+    echo "Installation canceled."
+fi
+
 # Add user to sudo group
 echo "Enter sudo password"
 sudo usermod -aG sudo $username

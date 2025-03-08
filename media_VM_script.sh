@@ -51,6 +51,7 @@ sudo usermod -aG docker $username
 # Install fish shell
 sudo apt install fish -y
 chsh -s /usr/bin/fish $username
+echo "alias ip 'ip -c'" >> ~/.config/fish/config.fish
 
 # Install tldr
 sudo apt install nodejs npm -y

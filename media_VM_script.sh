@@ -229,6 +229,52 @@ networks:
     driver: bridge
 EOF
 
+# Container configuration
+docker compose up
+echo "Waiting for services to be fully initialized..."
+
+# Loop until all required lines are detected
+while true; do
+  if grep -q 'qbittorrent.*
+
+\[ls.io-init\]
+
+ done' docker-compose-logs.txt && \
+     grep -q 'radarr.*
+
+\[ls.io-init\]
+
+ done' docker-compose-logs.txt && \
+     grep -q 'prowlarr.*
+
+\[ls.io-init\]
+
+ done' docker-compose-logs.txt && \
+     grep -q 'sonarr.*
+
+\[ls.io-init\]
+
+ done' docker-compose-logs.txt; then
+    echo "All services are initialized!"
+    break
+  fi
+  sleep 5
+done
+
+docker compose down
+#qBittorrent config
+echo "WebUI\Password_ha1=adminadmin" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "WebUI\DefaultTorrentManagementMode=1" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Connections\MaxConnectionsPerTorrent=400" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Global\MaxUploadSlots=400" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Connections\MaxUploadSlotsPerTorrent=100" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Queue\MaxActiveDownloads=200" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Queue\MaxActiveUploads=200" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Queue\MaxActiveTorrents=200" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+echo "Network\Interface=wg0" >> qbittorrent/config/qBittorrent/qBittorrent.conf
+
+k
+
 
 # Display system info and tools
 neofetch
@@ -246,7 +292,8 @@ echo "
 "
 sudo tree /mnt/media
 echo " "
-echo "Use docker compose up without -d, to get the login password for qbittorrent"
+echo "qBittorrent username: admin password: adminadmin"
+
 
 # Exit su session
 exit

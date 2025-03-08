@@ -8,7 +8,7 @@ read -p "Enter nfs IP and path (server_ip:/mnt/path): " nfs_ip_path
 read -p "Enter PIA username: " pia_username
 read -p "Enter PIA password: " pia_password
 
-echo "Do you have the Xen guest tools CD-ROM connected and want to install Xen guest tools? (yes/no)"
+echo "Do you have the Xen guest tools CD-ROM connected and want to install Xen guest tools? (y/n)"
 read answer
 if [ "$answer" == "yes" ]; then
     echo "Proceeding with the installation..."

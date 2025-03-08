@@ -275,9 +275,6 @@ echo "Queue\MaxActiveUploads=200" >> qbittorrent/config/qBittorrent/qBittorrent.
 echo "Queue\MaxActiveTorrents=200" >> qbittorrent/config/qBittorrent/qBittorrent.conf
 echo "Network\Interface=wg0" >> qbittorrent/config/qBittorrent/qBittorrent.conf
 
-k
-
-
 # Display system info and tools
 neofetch
 duf

@@ -10,7 +10,7 @@ read -p "Enter PIA password: " pia_password
 
 echo "Do you have the Xen guest tools CD-ROM connected and want to install Xen guest tools? (y/n)"
 read answer
-if [ "$answer" == "yes" ]; then
+if [ "$answer" == "y" ]; then
     echo "Proceeding with the installation..."
     # Set temporary path to avoid potential errors
     export PATH=$PATH:/sbin:/usr/sbin

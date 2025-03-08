@@ -233,8 +233,8 @@ networks:
 EOF
 
 # Container configuration
-export DOCKER_CLIENT_TIMEOUT=300
-export DOCKER_CONNECT_TIMEOUT=300
+export DOCKER_CLIENT_TIMEOUT=1000
+export DOCKER_CONNECT_TIMEOUT=1000
 docker compose up -d
 
 # Display system info and tools

@@ -230,6 +230,8 @@ networks:
 EOF
 
 # Container configuration
+export DOCKER_CLIENT_TIMEOUT=300
+export DOCKER_CONNECT_TIMEOUT=300
 docker compose up
 echo "Waiting for services to be fully initialized..."
 

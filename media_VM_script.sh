@@ -237,6 +237,14 @@ export DOCKER_CLIENT_TIMEOUT=1000
 export DOCKER_CONNECT_TIMEOUT=1000
 docker compose up -d
 
+#Configure portainer agent
+sudo docker volume create portainer_data
+sudo docker run -d -p 9001:9001 --name portainer_agent \
+  --restart always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/agent
+
 # Display system info and tools
 neofetch
 duf

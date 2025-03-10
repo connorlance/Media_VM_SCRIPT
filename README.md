@@ -1,7 +1,5 @@
 # Media VM Setup Script
 
-## Script Overview
-
 This script automates the setup of a media environment with the following tasks:
 
 - **Xen Guest Tools Installation**: Optionally installs Xen guest tools.

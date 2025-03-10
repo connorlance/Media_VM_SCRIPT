@@ -261,8 +261,8 @@ echo "
 "
 sudo tree /mnt/media
 echo " "
-echo "qBittorrent username: admin password: adminadmin"
-
+echo "Use the following command to get the default generated password for qBittorrent:"
+echo "docker inspect qbittorrent | grep -i 'password'"
 
 # Exit su session
 exit
